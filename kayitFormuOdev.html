@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Formu</title>
+    <style>
+        body {
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(201, 205, 247);
+        }
+        .container {
+            background-color: white;
+            position: absolute;
+            width: 80%;
+            height: 89%;
+            left: 9%;
+            right: 5%;
+            top: 5%;
+            border-radius: 5px;
+            box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.445);
+        }
+        h1, .h3 {
+            padding-left: 20px;
+        }
+        ul li {
+            list-style: none;
+        }
+        .isim, .adres, .iletişim {
+            margin-bottom: 30px;
+        }
+        .isim input, .iletişim input, .footer label, input, .adres input, select {
+            width: 300px;
+            height: 30px;
+            margin-right: 20px;
+            border-radius: 5px;
+            border-color: rgba(44, 39, 39, 0.521);
+        }
+        .adres select {
+            cursor: pointer;
+        }
+        .button {
+            margin-left: 40%;
+        }
+        .button button {
+            width: 200px;
+            height: 35px;
+            background-color: rgb(4, 119, 4);
+            color: white;
+            font-size: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button button:hover {
+            background-color: rgb(3, 80, 3);
+            color: rgb(241, 243, 241);
+            box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.445);
+        }
+    </style>
+    <script>
+        function kaydet() {
+            let isim = document.getElementById("isim");
+            let soyisim = document.getElementById("soyisim");
+            let adres = document.getElementById("adres");
+            let adres2 = document.getElementById("adres2");
+            let il = document.getElementById("il");
+            let ilce = document.getElementById("ilce"); 
+            let posta = document.getElementById("posta");
+            let ulke = document.getElementById("ulke");
+            let mail = document.getElementById("mail");
+            let telefon = document.getElementById("telefon");
+            let web = document.getElementById("web2"); 
+            let start = document.getElementById("start");
+            let sonuc = document.getElementById("sonuc");
+
+           
+
+            var gonderen = {
+                isim: isim.value,
+                soyisim: soyisim.value,
+                adres: adres.value,
+                adres2: adres2.value,
+                il: il.value,
+                ilce: ilce.value, 
+                posta: posta.value,
+                ulke: ulke.value,
+                mail: mail.value,
+                telefon: telefon.value,
+                web: web.value, 
+                start: start.value
+            };
+
+            console.log("Kaydedilen veri:", gonderen);
+            localStorage.setItem("gonderen", JSON.stringify(gonderen));
+            sonuc.innerHTML = "<b>Kayıt başarıyla tamamlandı!</b>";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+         <form onsubmit="return false;"> <!-- sayfa yenilenemesin diye  bunu kullandım -->
+            <h1>Üyelik Başvurusu</h1>
+            <h3 class="h3">Üyelik başvurusu için lütfen bütün alanları doldurun.</h3>
+            <hr>
+            <ul>
+                <li class="isim">
+                    <h3>İsim</h3>
+                    <input type="text" placeholder="İsim giriniz" id="isim">    
+                    <input type="text" placeholder="Soyisim giriniz" id="soyisim">
+                </li>
+                <li class="adres">
+                    <h3>Adres</h3>
+                    <input type="text" placeholder="Adres giriniz" id="adres">
+                    <input type="text" placeholder="Adres 2. satır" id="adres2">
+                    <br><br>
+                    <input type="text" placeholder="İl giriniz" id="il">
+                    <input type="text" placeholder="İlçe giriniz" id="ilce"><br><br>
+                    <input type="text" placeholder="Posta kodu giriniz" id="posta">
+                    <select id="ulke">
+                        <option value="Türkiye">Türkiye</option>
+                        <option value="Özbekistan">Özbekistan</option>
+                        <option value="Kırgızistan">Kırgızistan</option>
+                        <option value="Gürcistan">Gürcistan</option>
+                        <option value="Azerbaycan">Azerbaycan</option>
+                        <option value="Kazakistan">Kazakistan</option>
+                        <option value="Türkmenistan">Türkmenistan</option>
+                        <option value="Gagavuzya">Gagavuzya</option>
+                    </select>
+                </li>
+                <li class="iletişim">
+                    <h3>İletişim</h3>
+                    <input type="text" placeholder="Mail adresi giriniz" id="mail">
+                    <input type="text" placeholder="Telefon numarası giriniz" id="telefon" required>
+                </li>
+                <br>
+                <li class="footer">
+                    <h3>Kayıt Sonu</h3>
+                    <label for="web2">Websitesi</label>
+                    <input type="text" id="web2">
+                    <br><br>
+                    <label for="start">Tarih</label>
+                    <input type="date" id="start">
+                </li>
+            </ul>
+        </form>
+        <hr>
+        <div class="button">
+            <button type="button" onclick="kaydet()">Kayıt Ol</button><br>   
+            <p id="sonuc"></p>
+        </div>
+    </div>
+ <!-- Mert Osman Eribol -->
+</body>
+</html>
