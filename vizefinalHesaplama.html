@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function notOrtalamasi() {
+            let vize1 = parseInt(document.getElementById("vize1").value);
+            let vize2 = parseInt(document.getElementById("vize2").value);
+            let final = parseInt(document.getElementById("final").value);
+
+            let ortalama = (vize1 * 0.3) + (vize2 * 0.3) + (final * 0.4);
+
+            document.getElementById("sonuc").innerHTML = "Not Ortalaması: " + ortalama.toFixed(2);
+        }
+
+    </script>
+<style>
+    body{
+        background-color: black;
+    }
+    .container{
+        background-color: rgb(238, 74, 74);
+        width: 25%;
+        height: 350px;
+        text-align: center;
+        margin-left: 33%;
+        margin-top: 10%;
+        border-radius: 25px;
+    }
+    .content label,input{
+        margin-bottom: 25px;
+        border-radius: 5px;
+        width: 35%;
+      
+
+    }
+  .content span{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  #sonuc{
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .container h1{
+    color: rgb(241, 236, 236);
+    
+  }
+
+  .container button{
+    font-size: 130%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+
+  }
+  .container button:hover{
+    background-color: black;
+    color: white;
+  }
+</style>
+</head>
+<body>
+<div class="container"> 
+    <h1 class="baslık">Vize Final Hesaplayıcı</h1>
+    <div class="content">
+        <br>
+        <label  for="vize1"><span>Vize1 </span> </label><br>
+        <input type="text" id="vize1"><br>
+        <label for="vize2"><span>Vize2 </span></label><br>
+        <input type="text" id="vize2"><br>
+        <label for="final"><span>Final </span></label><br>
+        <input type="text" id="final"><br>
+        
+    </div>
+    
+    
+    
+    <button type="button" id="btnhesapla" onclick="notOrtalamasi()">Hesapla</button>
+    
+    <p id="sonuc"></p></div>
+
+
+</body>
+</html>
