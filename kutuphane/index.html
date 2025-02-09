@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kütüphane</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+        
+            text-align: center;
+            background-image: url(https://3dduvarkagitlari.com/Content/images/2020/12/15/l/3dduvarkagitlari-f6ffe79f.jpg);
+            background-size: cover;
+        }
+
+      
+        .navbar {
+            background-color: #053007fd;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+       
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .logo-info {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            font-family:cursive;
+        }
+
+  
+        .menu ul {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
+        .menu ul li {
+            display: inline;
+        }
+        .menu ul a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .menu ul a:hover {
+            color: #218838;
+        }
+
+      
+        .contact ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+        .contact ul a {
+            text-decoration: none;
+            color: rgb(235, 221, 216);
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .contact ul a:hover {
+            color: #218838;
+        }
+        .contact i {
+            color: white;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+        .container {
+            width: 30%;
+            background: rgb(240, 238, 238);
+            padding: 20px;
+            margin: 200px auto;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(116, 114, 1, 0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            
+        }
+
+        select, input[type="date"], input[type="submit"] , .input{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+            cursor: pointer;
+        }
+
+
+
+       
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            .menu ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 10px;
+            }
+            .contact ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+     
+        <div class="logo">
+            <span class="logo-info">MOE</span>
+            <img src="https://w7.pngwing.com/pngs/740/46/png-transparent-digital-library-community-glass-rectangle-bookcase-thumbnail.png" alt="Kütüphane Logosu">
+            <span class="logo-info">KÜTÜPHANESİ</span>
+        </div>
+
+       
+        <div class="menu">
+            <ul>
+                <li><a href="uyelik.html">Üyelik İşlemleri</a></li>
+                <li><a href="personel.html">Personel Kayıt</a></li>
+                <li><a href="kitaplar.html">Kitap Kütüphanemiz</a></li>
+                <li><a href="index.html">Kitap Ödünç Alma</a></li>
+            </ul>
+        </div>
+
+     
+        <div class="contact">
+            <ul>
+                <li><i class="fa-solid fa-phone"></i><a href="#">İletişim</a></li>
+                <li><i class="fa-solid fa-headset"></i><a href="#">Canlı Destek</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+       
+        
+        
+        <h2> <i class="fa-solid fa-bookmark"></i> Kitap Ödünç Alma Formu</h2>
+
+        <form id="oduncForm">
+            <label for="uye_id">Üye Seçin:</label>
+            <input class="input" type="number" id="uye_id" placeholder="Üye ID" required>
+
+            <label for="kitap_id">Kitap Seçin:</label>
+            <input  class="input" type="number" id="kitap_id" placeholder="Kitap ID" required>
+
+            <label for="kitap_id">Personel Seçin:</label>
+            <input class="input" type="number" id="personel_id" placeholder="Personel ID" required>
+            
+            <label for="alis_tarihi">Ödünç Alma Tarihi:</label>
+            <input type="date" id="alis_tarihi" name="alis_tarihi" required>
+
+            <label for="iade_tarihi">İade Tarihi:</label>
+            <input type="date" id="teslim_tarihi" name="teslim_tarihi" required>
+
+            <input type="submit" value="Kitabı Ödünç Al">
+        </form>
+      
+       
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Üyelik İşlemleri</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-image: url(https://3dduvarkagitlari.com/Content/images/2020/12/15/l/3dduvarkagitlari-f6ffe79f.jpg);
+            background-size: cover;
+        }
+
+        .navbar {
+            background-color: #053007fd;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .logo-info {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+
+        .menu ul {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
+        .menu ul a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .menu ul a:hover{
+            color: #218838;
+        }
+
+        .contact ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+        .contact ul a {
+            text-decoration: none;
+            color: rgb(235, 221, 216);
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .contact ul a:hover {
+            color: #218838;
+        }
+        .contact i {
+            color: white;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        .container {
+            width: 30%;
+            background: rgb(216, 213, 213);
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            font-weight: 600;
+            color: #073f0afd;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        .button button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        .button button:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            .menu ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 10px;
+            }
+            .contact ul {
+                flex-direction: column;
+                gap: 10px;
+            }}
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <span class="logo-info">MOE</span>
+        <img src="https://w7.pngwing.com/pngs/740/46/png-transparent-digital-library-community-glass-rectangle-bookcase-thumbnail.png" alt="Kütüphane Logosu">
+        <span class="logo-info">KÜTÜPHANESİ</span>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="uyelik.html">Üyelik İşlemleri</a></li>
+            <li><a href="personel.html">Personel Kayıt</a></li>
+            <li><a href="kitaplar.html">Kitap Kütüphanemiz</a></li>
+            <li><a href="index.html">Kitap Ödünç Alma</a></li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <ul>
+            <li><i class="fa-solid fa-phone"></i><a href="#">İletişim</a></li>
+            <li><i class="fa-solid fa-headset"></i><a href="#">Canlı Destek</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h2> <i class="fa-solid fa-book-open"></i> Kütüphane Üye Kayıt Formu</h2>
+
+    <form onsubmit="return false;">
+        <label for="ad">Ad</label>
+        <input type="text" id="ad">
+
+        <label for="soyad">Soyad</label>
+        <input type="text" id="soyad">
+
+        <label for="tcno">TC No</label>
+        <input type="tel" id="tcno" required maxlength="11" pattern="\d{11}" title="11 haneli TC Kimlik Numaranızı girin.">
+
+        <label for="gsm">Telefon</label>
+        <input type="tel" id="gsm" required maxlength="11" pattern="\d{11}" title="11 haneli telefon numaranızı girin.">
+
+        <label for="email">Email</label>
+        <input type="email" id="email">
+
+        <label for="il">Şehir</label>
+        <input type="text" id="il">
+
+        <label for="ilce">İlçe</label>
+        <input type="text" id="ilce">
+
+        <label for="cadde_sokak">Cadde-Sokak</label>
+        <input type="text" id="cadde_sokak">
+
+        <label>Cinsiyet</label><br>
+        <label for="erkek">Erkek</label>
+        <input type="radio" id="erkek" name="cinsiyet" value="Erkek"> 
+        <label for="kadin">Kadın</label>
+        <input type="radio" id="kadin" name="cinsiyet" value="Kadın"><br><br>
+
+        <label for="sifre">Şifre</label>
+        <input type="password" id="sifre" required maxlength="20" minlength="6">
+
+        <label for="kayit-tarihi">Kayıt Tarihi</label>
+        <input type="date" id="kayit-tarihi" required>
+
+        <div class="button">
+            <button type="button" onclick="kaydet()">Kayıt Ol</button>  
+        </div>
+
+        <p id="sonuc"></p>
+    </form>
+</div>
+
+<script>
+    function kaydet() {
+        let ad = document.getElementById("ad").value;
+        let soyad = document.getElementById("soyad").value;
+        let tcno = document.getElementById("tcno").value;
+        let gsm = document.getElementById("gsm").value;
+        let email = document.getElementById("email").value;
+        let il = document.getElementById("il").value;
+        let ilce = document.getElementById("ilce").value;
+        let cadde_sokak = document.getElementById("cadde_sokak").value;
+        let sifre = document.getElementById("sifre").value;
+        let kayitTarihi = document.getElementById("kayit-tarihi").value;
+
+        let cinsiyet = "";
+        if (document.getElementById("erkek").checked) {
+            cinsiyet = "Erkek";
+        } else if (document.getElementById("kadin").checked) {
+            cinsiyet = "Kadın";
+        }
+
+        if (!ad || !soyad || !tcno || !gsm || !email || !il || !ilce || !cadde_sokak || !sifre || !kayitTarihi || !cinsiyet) {
+            document.getElementById("sonuc").innerHTML = "<b style='color:red;'>Lütfen tüm alanları doldurun!</b>";
+            return;
+        }
+
+        let gonderen = { ad, soyad, tcno, gsm, email, il, ilce, cadde_sokak, sifre, kayitTarihi, cinsiyet };
+        localStorage.setItem("gonderen", JSON.stringify(gonderen));
+
+        document.getElementById("sonuc").innerHTML = "<b style='color:green;'>Kayıt başarıyla tamamlandı!</b>";
+    }
+</script>
+
+</body>
+</html>
+
+
