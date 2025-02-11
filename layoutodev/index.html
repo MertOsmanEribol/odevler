@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="allcontainer">
+    <div class="secret-menu">
+        <div class="sidebar">
+            <div class="sidebarHeader">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <ul class="menu">
+                <a class="main-button" href="#">
+                    <i class="bi bi-house-door"></i>
+                    Ana Sayfa
+                </a>
+                <a class="main-button" href="#">
+                    <i class="bi bi-info-circle"></i>
+                    Hakkımızda
+                </a>
+                <a class="main-button" href="#">
+                    <i class="bi bi-envelope"></i>
+                    İletişim
+                </a>
+            </ul>
+            <h1 class="hizmet">Hizmetlerimiz</h1>
+            <ul class="menu">
+                <li> <a href="#"></a><i class="fa-solid fa-image"></i> Galeri</li>
+                <li>  <a href="#"><i class="fa-solid fa-envelope-open-text"></i> Mailler</a></li>
+                <li> <a href="#"><i class="fa-solid fa-tree-city"></i> Uİ Elementleri</a></li>
+                <li> <a href="#"><i class="fa-solid fa-person-digging"></i> Personel Arayüzü</a> </li>
+            </ul>
+        </div>
+    </div>
+    
+<div class="navbar">
+<div class="leftmenu">
+    <i class="fa-solid fa-bars"></i>
+    <ul>
+    <li><a href="#">Anasayfa</a></li>
+    <li><a href="#">İletişim</a></li>
+</ul>
+</div>
+<div class="rightmenu">     
+    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <ul class="submain">
+    <li > <a href="#"> <i class="fa-regular fa-comments"></i></a>
+        <div class="submenu1">
+            <ul>
+                <li>
+                    <div class="profilpic">
+                        <img src="pp.png" alt="">
+                    </div>
+                   <div class="message">
+                    <span>Mert Eribol</span>
+                    <p>Dersler iyi gidiyor...</p>
+                <i class="fa-regular fa-clock"> 4 saat once</i>
+                   </div>
+                   <div class="star">
+                    <i class="fa-solid fa-star" ></i>
+                   </div>
+                
+                </li>
+                <li></li>
+                <li></li>
+            </ul>
+         </div>
+    </li>
+ </ul>
+   <a href="#"> <i class="fa-regular fa-bell"></i></a>
+    <a href="#"><i class="fa-solid fa-maximize"></i></a>
+    <a href="#"><i class="fa-solid fa-table-cells-large"></i></a>
+
+
+</div>
+
+</div>
+<div class="dashbord">
+    <div class="boxex">
+        <div class="box">
+            <div class="boxcontent">
+                <div class="boxleft">
+                    <h4>150</h4>
+                    <p>Yeni Siparişler</p>
+                </div>
+                <div class="boxright">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>   
+            </div>
+            <div class="info">
+                <p>Daha fazlası</p>
+                <i class="fa-solid fa-circle-right"></i>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="boxcontent">
+                <div class="boxleft">
+                    <h4>53%</h4>
+                    <p>İndirim Haftası Karı</p>
+                </div>
+                <div class="boxright">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>   
+            </div>
+            <div class="info">
+                <p>Daha fazlası</p>
+                <i class="fa-solid fa-circle-right"></i>
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="boxcontent">
+                <div class="boxleft">
+                    <h4>35</h4>
+                    <p>Personeller</p>
+                </div>
+                <div class="boxright">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>   
+            </div>
+            <div class="info">
+                <p>Daha fazlası</p>
+                <i class="fa-solid fa-circle-right"></i>
+            </div>
+        </div>
+        <div class="box box4">
+            <div class="boxcontent">
+                <div class="boxleft">
+                    <h4>12</h4>
+                    <p>Bekleyen Görevler</p>
+                </div>
+                <div class="boxright">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>   
+            </div>
+            <div class="info">
+                <p>Daha fazlası</p>
+                <i class="fa-solid fa-circle-right"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="contents">
+
+<div class="content1">
+
+</div>
+<div class="content2">
+
+</div>
+
+<div class="footer">
+    <p> 2025 Tüm Hakları Saklı Değildir |  Mert Eribol</p>
+</div>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+<script>
+
+    // yandan maçılır kapanır menü js kodları//
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".navbar .leftmenu i")
+    const sidebar = document.querySelector(".sidebar");
+    const closeIcon = document.querySelector(".sidebarHeader i");
+
+   
+    menuIcon.addEventListener("click", function () {
+        sidebar.classList.add("active");
+    });
+
+   
+    closeIcon.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+    });
+});
+
+</script>
+</body>
+</html>

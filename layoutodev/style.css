@@ -1,0 +1,347 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    background-color: rgb(204, 197, 197);
+}
+
+.allcontainer{
+    display: grid;
+    grid-template-rows: 100px auto 1fr auto;
+    grid-template-columns: 1fr ;
+    height: auto;
+    grid-template-areas:
+    
+        "navbar  "
+        "dashbord "
+        "contents"
+        "footer";
+
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+
+
+
+/* NAVBAR BAŞLANGIC*/
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(117, 48, 48);
+    background-color: rgb(231, 227, 227);
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    grid-area: navbar;
+}
+.leftmenu{
+    display: flex;
+    gap: 30px;
+    padding-left: 30px;
+    font-size: 18px;
+    
+    
+}
+.leftmenu ul{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.leftmenu ul li a{
+    text-decoration: none;
+   color: rgb(112, 111, 111);
+   transition: 0.3s ease-in;
+}
+.leftmenu i{
+    color: rgb(128, 125, 125);
+    cursor: pointer;
+}
+
+.leftmenu ul li a:hover,i:hover{
+    color: rgb(0, 0, 0);
+}
+
+.rightmenu{
+    display: flex;
+    gap: 15px;
+    padding-right: 20px;
+    font-size: 18px;
+    position: relative;
+   
+    
+}
+.rightmenu a{
+    text-decoration: none;
+    color: rgb(61, 60, 60);
+    padding: 4px;
+}
+.rightmenu ul{
+    list-style-type: none;
+}
+
+
+.submain:hover .submenu1{
+    display: block;
+}
+
+/* submenu baslangıc*/
+.submenu1{
+    background-color: rgb(238, 232, 232);
+    position: absolute;
+    top: 100%;
+    right: 60%;
+    border-radius: 10px;
+    padding: 10px 0;
+    height: 100px;
+    width: 250px;
+    margin-top: 24px;
+    border: 1px solid rgba(17, 17, 17, 0.151);
+    display: none;
+    z-index: 1;
+}
+
+
+.submenu1 ul li{
+list-style-type: none;
+font-size: 10px;
+display: flex;
+gap: 15px;
+text-align: top;
+align-items: top;
+justify-content: space-between;
+position: relative;
+
+}
+.submenu1 .profilpic img{
+  width: 70px;
+  border-radius: 100%;
+  padding-left: 4px;
+}
+.message{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.message span{
+    color: black;
+    font-size: 17px;
+}
+.message p{
+    color: rgb(59, 57, 57);
+}
+.message .fa-clock{
+    gap: 5px;
+    font-size: 10px;
+
+}
+
+.star i{
+    color: rgb(175, 5, 5);
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+/*sub menu bitiş! 
+(javascript  event listener  
+click functionu ile kullamak
+daha doğru gibi tabi */
+
+
+/* NAVBAR BİTİŞ*/
+
+/* dashbord başlangıc */
+.dashbord {
+    grid-area: dashbord;
+    padding-left: 25px;
+}
+
+.boxex {
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.box {
+    width: 23%; 
+    height: 150px;
+    background-color: rgb(73, 73, 189);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.boxcontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.boxleft h4 {
+    color: white;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.boxleft p {
+    color: rgb(255, 250, 250);
+    font-size: 17px;
+}
+
+.boxright i {
+    color: #404040b0;
+    font-size: 50px;
+    padding-right: 15px;
+    transition: 0.7s ease-in-out;
+    cursor: pointer;
+}
+
+.boxright i:hover {
+    color: rgb(26, 170, 69);
+    transform: rotate(360deg);
+}
+
+.info {
+    background-color: rgb(117, 117, 214);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.info:hover{
+    background-color: rgb(87, 87, 151);
+}
+
+.box2{
+    background-color: rgb(206, 12, 12);
+}
+.box2 .info{
+background-color: rgb(190, 81, 81);
+}
+.box3{
+    background-color: rgb(192, 16, 169);
+}
+.box3 .info{
+background-color: rgb(204, 90, 179);
+}
+
+/* content baslangıc */
+
+
+
+
+
+
+
+/* contetnt bitiş */
+
+
+
+
+
+/* FOOTER BASLANGIC */
+
+.footer {
+    grid-area: footer;
+    background-color: #151e27; 
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*FOOOTER BİTİŞ */ 
+
+
+
+.secret-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100;
+    color: #333333;
+
+    
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out; 
+}
+
+
+.sidebar.active {
+    left: 0;
+}
+
+
+.sidebarHeader {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+
+.sidebarHeader i {
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s;
+}
+
+.sidebar .menu a:hover {
+    background: #555;
+}
+
+
+.hizmet {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
