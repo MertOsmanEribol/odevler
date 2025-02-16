@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Hasta Kayıt</title>
+
+<!-- MERT OSMAN ERİBOL ÖDEV -->
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgba(219, 214, 214, 0.199);
+        }
+        .allcontainer{
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+/* Header başlangıc */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.219);
+    width: 100%;
+    height: 70px;
+    position: sticky;
+}
+.header .logo img{
+    width: 70px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.header .social i{
+    font-size: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+/* header bitiş  */
+/* Navbar baslangıc */
+
+      
+
+.navbar{
+    background-color: rgb(139, 138, 138);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+.navbar ul li:hover{
+    background-color: black;
+  
+}
+
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Navbar */
+
+/* main content baslangıc */
+
+.maincontent
+
+{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            
+            background-image: url(https://bf81qhfx.tinifycdn.com/img/hospitalImages/florence-nightingale-hastanesi_3798.jpeg);
+        }
+.leftbar{
+    background-color: rgba(128, 128, 128, 0.658);
+   
+}
+
+.leftbar ul li{
+    padding-top: 15px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style-type: none;
+    cursor: pointer;
+    
+    
+    
+}
+.leftbar ul li:hover{
+    background-color: black;
+    
+}
+.leftbar ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.rightbar{
+    margin-top: 20px;
+    padding-left: 25%;
+}
+form {
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(128, 128, 128, 0.651);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+       button:hover {
+    background-color: #218838;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .header .logo img {
+        width: 50px;
+        margin: 0;
+    }
+
+    .header .headercontent h1 {
+        font-size: 20px;
+    }
+
+    .header .social {
+        display: none; /* Sosyal ikonları gizle */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .left {
+        display: none; /* Sol menüyü kaldır */
+    }
+
+    .navbar .right ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .right ul li {
+        width: 100%;
+    }
+
+    .maincontent {
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+        padding: 10px;
+    }
+
+    .leftbar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .leftbar ul {
+        padding: 0;
+    }
+
+    .leftbar ul li {
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .rightbar {
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .footer {
+        font-size: 8px;
+        height: auto;
+        padding: 5px;
+    }
+}
+
+
+/* main content bitiş  */
+
+
+.footer{
+background-color: black;
+color: white; 
+text-align: center;
+bottom: 0;
+font-size: 10px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+    </style>
+</head>
+<body>
+    <div class="allcontainer">
+<div class="header">
+    <div class="logo"><img src="https://w7.pngwing.com/pngs/203/597/png-transparent-hospital-logo-icon-hospital-signs-other-medicine-product-design-thumbnail.png" alt=""> </div>
+    <div class="headercontent"><h1>MOE ÖZEL HASTANESİ</h1></div>
+    <div class="social">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+
+
+</div>
+<div class="navbar">
+    <div class="left"><ul>
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Doktorlarımız</a></li>
+        <li><a href="#">Tıbbi Birimlerimiz</a></li>
+        <li><a href="#">Hasta kayıt</a></li>
+        <li><a href="#">Randevular</a></li>
+    </ul></div>
+    <div class="right">
+        <ul>
+            <li><a href="#"> <i class="fa-solid fa-phone"></i>  İletişim </a> </li>
+            <li><a href="#"> <i class="fa-solid fa-house-medical"></i> Hakkımızda</a></li>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i> Konum</a></li>
+        </ul>
+    </div>
+
+</div>
+<div class="maincontent">
+    
+    <div class="leftbar">
+        <ul>
+            <li><a href="">Tomografi bölümü</a></li>
+            <li><a href="">Kardiyoloji bölümü</a></li>
+            <li><a href="">İç hastalıklar bölümü</a></li>
+            <li><a href="">Nöroloji Bölümü</a></li>
+            <li><a href="">Hematoloji Bölümü</a></li>
+        </ul>
+    </div>
+    <div class="rightbar">
+        <h1>Hasta Kayıt Formu</h1>
+
+        <form onsubmit="return false;">
+            <label for="ad">Ad:</label>
+            <input type="text" id="ad" name="ad" required>
+    
+            <label for="soyad">Soyad:</label>
+            <input type="text" id="soyad" name="soyad" required>
+    
+            <label for="tcno">TC No:</label>
+            <input type="tel" id="tcno" name="tcno" required maxlength="11" pattern="\d{11}" title="11 haneli TC Kimlik Numaranızı girin.">
+    
+            <label for="dogum_tarihi">Doğum Tarihi:</label>
+            <input type="date" id="dogum_tarihi" name="dogum_tarihi" required>
+    
+            <label for="cinsiyet">Cinsiyet:</label>
+            <select id="cinsiyet" name="cinsiyet">
+                <option value="erkek">Erkek</option>
+                <option value="kadin">Kadın</option>
+            </select>
+
+            <label for="bolüm">Tıbbi Bölüm</label>
+            <select id="bolüm" name="bolüm">
+                <option value="Tomografi">Tomografi</option>
+                <option value="kardiyoloji">Kardiyoloji</option>
+                <option value="içhastaliklar">İç Hastalıklar</option>
+                <option value="nöroloji">Nöroloji</option>
+                <option value="hematoloji">Hematoloji</option>
+            </select>
+    
+            <label for="gsm">Telefon:</label>
+            <input type="tel" id="gsm" name="telefon" required maxlength="11" pattern="\d{11}" title="11 haneli telefon numaranızı girin.">
+    
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email">
+    
+            <label for="adres">Adres:</label>
+            <textarea id="adres" name="adres" rows="4"></textarea>
+    
+            <button type="button" onclick="kaydet()">Kaydet</button>
+            <p id="sonuc"></p>
+        </form>
+    </div>
+</div>
+<div class="footer">
+    <h3>Sayfa içeriği sadece bilgilendirme amaçlıdır. Tanı ve tedavi için mutlaka doktorunuza başvurunuz.</h3>
+</div>
+
+    </div>
+
+    <script>
+        function kaydet() {
+            let ad = document.getElementById("ad").value;
+            let soyad = document.getElementById("soyad").value;
+            let tcno = document.getElementById("tcno").value;
+            let gsm = document.getElementById("gsm").value;
+            let email = document.getElementById("email").value;
+            let bolüm = document.getElementById("bolüm").value;
+            let dogumTarihi = document.getElementById("dogum_tarihi").value;
+            let cinsiyet = document.getElementById("cinsiyet").value;
+            let adres = document.getElementById("adres").value;
+    
+            if (!ad || !soyad || !tcno || !gsm || !email  || !dogumTarihi || !cinsiyet || !bolüm || !adres ) {
+                document.getElementById("sonuc").innerHTML = "<b style='color:red;'>Lütfen tüm alanları doldurun!</b>";
+                return;
+            }
+    
+            let gonderen = { ad, soyad, tcno, gsm, email, dogumTarihi, cinsiyet, adres, bolüm,  };
+            localStorage.setItem("gonderen", JSON.stringify(gonderen));
+    
+            document.getElementById("sonuc").innerHTML = "<b style='color:green;'>Kayıt başarıyla tamamlandı!</b>";
+        }
+    </script>
+</body>
+</html>
