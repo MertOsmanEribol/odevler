@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+
+      input{
+        cursor: pointer;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body >
+    <div class="container w-75 mt-5 ">
+      <div
+        class="container shadow d-flex justify-content-center border bg-light text-dark p-4"
+      >
+        <form class="w-100">
+          <div class="row align-items-center g-3">
+            <div class="col-md-4">
+              <input
+                type="text"
+                placeholder="Email"
+                class="form-control"
+                id="usr"
+              />
+            </div>
+            <div class="col-md-4">
+              <input
+                type="password"
+                placeholder="Password"
+                class="form-control"
+                id="pwd"
+              />
+            </div>
+            <div class="col-md-2 d-flex align-items-center gap-2">
+              <input class="form-check-input" type="checkbox" id="remember" />
+              <label for="remember" class="mb-0">Beni Hatırla</label>
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-primary w-100">
+                Kaydet
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container mt-5 border p-4 bg-light text-dark shadow">
+        <div class="row align-items-center g-3">
+          <div class="col-md-4">
+            <input
+              type="number"
+              maxlength="11"
+              placeholder="TcNo"
+              class="form-control"
+              id="tcno"
+            />
+          </div>
+          <div class="col-md-4">
+            <input
+              type="text"
+              placeholder="AdSoyad"
+              class="form-control"
+              id="ad"
+            />
+          </div>
+          <div class="row align-items-center g-3">
+            <div class="col-md-4 mb-5">
+              <input
+                type="number"
+                placeholder="TelNo"
+                class="form-control"
+                id="gsm"
+              />
+            </div>
+            <div class="col-md-4 ">
+              <select class="form-select">
+                <option selected>Şehir Seçiniz</option>
+                <option value="tr">Samsun</option>
+                <option value="vf">Mersin</option>
+                <option value="tt">İstanbul</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 d-inlne mb-5">
+           <h4 class="mb-4">Hobiler</h4>
+           <div class="d-flex gap-5">
+            <div class=" d-flex gap-1 align-items-center ">
+                <input type="checkbox" name="Aticilik" id="">
+                <span>Atıcılık</span>
+               </div>
+               <div class=" d-flex gap-1 me-4 align-items-center">
+                <input type="checkbox" name="Aticilik" id="">
+                <span>Kamp</span>
+               </div>
+               <div class=" d-flex gap-1 me-4 align-items-center">
+                <input type="checkbox" name="Aticilik" id="">
+                <span> Tenis</span>
+               </div>
+               <div class=" d-flex gap-1 me-4 align-items-center">
+                <input type="checkbox" name="Aticilik" id="">
+                <span>Futbol</span>
+               </div>
+               <div class=" d-flex gap-1 me-4 align-items-center">
+                <input type="checkbox" name="Aticilik" id="">
+                <span>Basketbol</span>
+               </div>
+               <div class=" d-flex gap-1 me-4 align-items-center">
+                <input type="checkbox" name="Aticilik" id="">
+                <span>Mangal</span>
+               </div>
+           </div>
+   
+          </div>
+          <div class="d-flex gap-5 align-items-center mb-5">
+            <h4 class="me-5">Askerlik Durumu :</h4> 
+               <div class="form-check ">
+                <input class="form-check-input" type="radio" name="status" id="done">
+                <span class="ms-2">Yapıldı</span>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="status" id="not-done">
+                <span class="ms-2">Yapılmadı</span>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="status" id="exempt">
+                <span class="ms-2">Muaf</span>
+            </div>
+               
+          </div>
+          <div class="d-flex gap-5 mb-5">
+            <h4 class="me-5">Adres:</h4>
+<textarea style="resize: none" class="ms-5 w-50" name="adres" id="adres" placeholder="Adres Giriniz"></textarea>
+          </div>
+          <div class="input-group mb-3 w-50 ">
+            <h4 class="me-5">Resim Yükle </h4>
+            <input type="file" class="form-control" id="inputGroupFile01">
+          </div>
+         
+        </div>
+        <button type="button" class=" d-flex btn btn-primary w-25 ms-5 justify-content-center">
+            Kaydet
+          </button>
+      </div>
+  </body>
+</html>
